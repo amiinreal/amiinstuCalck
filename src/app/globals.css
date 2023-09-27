@@ -1,0 +1,87 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --foreground-rgb: 0, 0, 0;
+  --background-start-rgb: 0, 0, 0;/* 214,219,220 */
+  --background-end-rgb: 0, 0, 0; /* 255,255,255 */
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --foreground-rgb: 0, 0, 0; /* 255,255,255 */
+    --background-start-rgb: 0, 0, 0;
+    --background-end-rgb: 0, 0, 0;
+  }
+}
+
+body {
+  color: rgb(var(--foreground-rgb));
+  background: linear-gradient(
+          to bottom,
+          transparent,
+          rgb(var(--background-end-rgb))
+  )
+  rgb(var(--background-start-rgb));
+}
+
+.numbers button{
+  text-align: center;
+  width: 40px;
+  border-radius: 15px;
+  margin: 20px;
+  background-color: #FFFF;
+}
+.numbers button.result {
+  background-color: #28ff6f;
+}
+.numbers button.expression {
+  background-color: #ffdf28;
+}
+.numbers button.c {
+  background-color: #ff2828;
+}
+.numbers div{
+  text-align: center;
+}
+.numbers{
+  background: linear-gradient( to bottom, transparent, rgb(var(--background-end-rgb)) ) rgb(var(--background-start-rgb));
+}
+
+@media screen and (min-width: 400px) {
+  .numbers {
+    width: auto;
+    background-color: lightgreen;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .keeper{
+    display: grid;
+    grid-column: auto;
+    align-items: end;
+    height: 100%;
+    margin-top: 45px;
+    padding-top: 100px;
+    width: 100%;
+
+  }
+
+  .keeper .numbers {
+    width: 100%;
+
+
+  }
+
+}
+
+.keeper input{
+  text-align: right;
+}
+.numbers button{
+  color: black;
+  filter: brightness(110%) saturate(120%);
+
+
+}
